@@ -1,0 +1,37 @@
+workflows:
+  android-build:
+    name: RestoRank Partner Android Build
+    max_build_duration: 60
+    instance_type: linux_x2
+    
+    environment:
+      java: 17
+    
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+      
+      - name: Make gradlew executable
+        script: |
+          chmod +x ./gradlew
+      
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
+      
+      - name: Build Release APK
+        script: |
+          ./gradlew assembleRelease
+    
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
+      - app/build/outputs/apk/release/app-release-unsigned.apk
+    
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true

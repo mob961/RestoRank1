@@ -1,0 +1,13 @@
+buildscript {
+    ext {
+        kotlin_version = '1.9.0'
+        compile_sdk_version = 34
+        min_sdk_version = 24
+        target_sdk_version = 34
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.2.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+}

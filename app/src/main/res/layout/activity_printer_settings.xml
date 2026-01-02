@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thermal Printer Configuration"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Printer Name"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etPrinterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kitchen"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Printer IP Address"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etPrinterIp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="192.168.68.50"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Port"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/etPrinterPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="9100"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Switch
+                android:id="@+id/switchAutoPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto-print new orders"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnTestConnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Connection"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnTestPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print Test Page"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Settings"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+</ScrollView>
